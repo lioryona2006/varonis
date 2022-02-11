@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from Person import Person
-
-class MagicList():
+from collections import UserList
+class MagicList(UserList):
     def __init__(self, cls_type=None):
         self.data = []
         self._cls_type = cls_type
@@ -23,5 +23,4 @@ class MagicList():
             if self._cls_type:
                 self.data.append(self._cls_type())
         return self.data[index]
-    def __str__(self):
-        return str(list(self.data))
+
