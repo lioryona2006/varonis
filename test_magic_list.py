@@ -44,7 +44,7 @@ def test_update_boundary():
     magic_list = MagicList()
     for i in range(100):
         magic_list[i] = i
-        assert list(magic_list) == list(range(i + 1))
+        assert magic_list == list(range(i + 1))
 
 
 def test_compare_magiclistofperson_with_person():
